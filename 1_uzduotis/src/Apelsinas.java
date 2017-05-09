@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 /**
  * Created by JP16_2 on 2017.05.03.
  */
@@ -23,8 +25,11 @@ public class Apelsinas {
         this.a = a;
     }
 
-    public double getTuris() {
-        return (4/3*3.14*Math.pow((d-a),3));
+    DecimalFormat df = new DecimalFormat("#.##");
+
+    public String getTuris() {
+        double v = 4*Math.PI*Math.pow((d/2-a),3)/3;
+        return df.format(v);
     }
 
 
